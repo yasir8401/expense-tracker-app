@@ -5,7 +5,6 @@ export const AddTransaction = () => {
   const { addTransaction } = useContext(GlobalContext);
   const [text, setText] = useState("");
   const [amount, setAmount] = useState(0);
-  const [show, setShow] = useState(false);
 
   const onSubmit = (e, transactionType) => {
     console.log(amount === 0);

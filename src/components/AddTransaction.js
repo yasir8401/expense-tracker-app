@@ -24,7 +24,6 @@ export const AddTransaction = () => {
 
     setText("");
     setAmount(0);
-    setShow(true);
 
     alert("Your transaction has been added successfully!!!");
   };

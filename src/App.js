@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import "./App.css";
 import { Header } from "./components/Header";
 import { Balance } from "./components/Balance";
@@ -6,7 +6,7 @@ import { IncomeExpense } from "./components/IncomeExpense";
 import { TransactionList } from "./components/TransactionList";
 import { AddTransaction } from "./components/AddTransaction";
 
-import { GlobalProvider, GlobalContext } from "./context/GlobalState";
+import { GlobalProvider } from "./context/GlobalState";
 
 function App({ name }) {
   return (

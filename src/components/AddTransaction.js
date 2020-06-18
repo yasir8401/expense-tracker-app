@@ -32,8 +32,9 @@ export const AddTransaction = () => {
       <h3>Add new transaction</h3>
       <form>
         <div className="form-control">
-          <label htmlFor="text">Transaction Name</label>
+          <label htmlFor="transactonName">Transaction Name</label>
           <input
+            id="transactonName"
             type="text"
             value={text}
             onChange={(e) => setText(e.target.value)}
@@ -41,10 +42,11 @@ export const AddTransaction = () => {
           />
         </div>
         <div className="form-control">
-          <label htmlFor="amount">
+          <label htmlFor="transactionAmount">
             Transaction Amount <br />
           </label>
           <input
+            id="transactionAmount"
             type="number"
             value={amount}
             onChange={(e) => setAmount(e.target.value)}

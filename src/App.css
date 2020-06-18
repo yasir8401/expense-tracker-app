@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Lato&display=swap");
+@import url("https://kit.fontawesome.com/a076d05399.js");
 
 :root {
   --box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
@@ -91,16 +92,17 @@ input[type="number"] {
 
 .btn {
   cursor: pointer;
-  background-color: #9c88ff;
+  background-color: mediumblue;
   box-shadow: var(--box-shadow);
+  border-radius: 10px;
   color: #fff;
   border: 0;
-  display: inline-flex;
+  display: inline;
   font-size: 16px;
-  margin: 10px 0 30px;
-  margin-right: 10px;
+  margin: 10px 10px 30px 0;
   padding: 10px;
-  width: 47%;
+  /* width: 47%; */
+  min-width: 47%;
 }
 
 .btn:focus,

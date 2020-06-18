@@ -7,10 +7,10 @@ export const TransactionList = () => {
 
   return (
     <React.Fragment>
-      <h3>History</h3>
+      <h3>Transaction History</h3>
       <ul id="list" className="list">
-        {transactions.map((transaction) => (
-          <Transaction key={Transaction.id} transaction={transaction} />
+        {transactions.map((transaction, index) => (
+          <Transaction key={index} transaction={transaction} />
         ))}
       </ul>
     </React.Fragment>

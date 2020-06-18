@@ -4,10 +4,10 @@ import { GlobalContext } from "../context/GlobalState";
 export const AddTransaction = () => {
   const { addTransaction } = useContext(GlobalContext);
   const [text, setText] = useState("");
-  const [amount, setAmount] = useState(0);
+  const [amount, setAmount] = useState("");
 
   const onSubmit = (e, transactionType) => {
-    console.log(amount === 0);
+    e.preventDefault();
     if (text === "" || amount === 0 || amount === "") {
       return alert("Please input both Transaction Name & Transaction Amount");
     }
@@ -16,8 +16,7 @@ export const AddTransaction = () => {
     const newTransaction = {
       id: Math.floor(Math.random() * 100000000),
       text,
-      amount:
-        transactionType === "Income" ? parseInt(amount) : 0 - parseInt(amount),
+      amount: transactionType === "Income" ? +amount : 0 - +amount,
     };
 
     addTransaction(newTransaction);
@@ -49,22 +48,28 @@ export const AddTransaction = () => {
             type="number"
             value={amount}
             onChange={(e) => setAmount(e.target.value)}
+            min="0"
+            onKeyDown={(e) =>
+              (e.key === "-" || e.key === "+") && e.preventDefault()
+            }
             placeholder="Enter amount..."
           />
         </div>
         <div>
-          <button
+          <input
+            type="button"
             className="btn"
+            style={{ textAlign: "center" }}
             onClick={(e, transactionType) => onSubmit(e, "Income")}
-          >
-            Add Income
-          </button>
-          <button
+            value="Add Income"
+          ></input>
+          <input
+            type="button"
+            style={{ textAlign: "center" }}
             className="btn"
             onClick={(e, transactionType) => onSubmit(e, "Expense")}
-          >
-            Add Expense
-          </button>
+            value="Add Expense"
+          ></input>
         </div>
       </form>
     </React.Fragment>

@@ -47,7 +47,6 @@ export const AddTransaction = () => {
           <input
             id="transactionAmount"
             type="number"
-            id="btnIncome"
             value={amount}
             onChange={(e) => setAmount(e.target.value)}
             min="0"

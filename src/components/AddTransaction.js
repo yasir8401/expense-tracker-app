@@ -29,7 +29,7 @@ export const AddTransaction = () => {
 
   return (
     <React.Fragment>
-      <h3>Add new transaction</h3>
+      <h3>Add New Transaction</h3>
       <form>
         <div className="form-control">
           <label htmlFor="transactonName">Transaction Name</label>

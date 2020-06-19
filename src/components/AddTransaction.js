@@ -12,7 +12,6 @@ export const AddTransaction = () => {
       return alert("Please input both Transaction Name & Transaction Amount");
     }
 
-    e.preventDefault();
     const newTransaction = {
       id: Math.floor(Math.random() * 100000000),
       text,

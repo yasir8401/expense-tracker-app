@@ -1,7 +1,8 @@
 import React, { createContext, useReducer } from "react";
 import AppReducer from "./AppReducer";
+import { transitions } from "react-alert";
 
-// Initial state
+//Initial state
 const initialState = {
   transactions: [],
 };

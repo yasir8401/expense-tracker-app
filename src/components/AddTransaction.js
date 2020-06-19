@@ -6,7 +6,7 @@ export const AddTransaction = () => {
   const [text, setText] = useState("");
   const [amount, setAmount] = useState("");
 
-  const onSubmit = (e, transactionType) => {
+  const onSubmit = (e) => {
     e.preventDefault();
     if (text === "" || amount === 0 || amount === "") {
       return alert("Please input both Transaction Name & Transaction Amount");
@@ -16,13 +16,13 @@ export const AddTransaction = () => {
     const newTransaction = {
       id: Math.floor(Math.random() * 100000000),
       text,
-      amount: transactionType === "Income" ? +amount : 0 - +amount,
+      amount: e.target.id === "btnIncome" ? +amount : 0 - +amount,
     };
 
     addTransaction(newTransaction);
 
     setText("");
-    setAmount(0);
+    setAmount("");
 
     alert("Your transaction has been added successfully!!!");
   };
@@ -48,6 +48,7 @@ export const AddTransaction = () => {
           <input
             id="transactionAmount"
             type="number"
+            id="btnIncome"
             value={amount}
             onChange={(e) => setAmount(e.target.value)}
             min="0"
@@ -60,16 +61,18 @@ export const AddTransaction = () => {
         <div>
           <input
             type="button"
+            id="btnIncome"
             className="btn"
             style={{ textAlign: "center" }}
-            onClick={(e, transactionType) => onSubmit(e, "Income")}
+            onClick={(e) => onSubmit(e)}
             value="Add Income"
           ></input>
           <input
             type="button"
+            id="btnExpense"
             style={{ textAlign: "center" }}
             className="btn"
-            onClick={(e, transactionType) => onSubmit(e, "Expense")}
+            onClick={(e) => onSubmit(e)}
             value="Add Expense"
           ></input>
         </div>

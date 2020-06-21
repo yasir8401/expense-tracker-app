@@ -40,9 +40,23 @@ export const ExportExcel = () => {
                         </tr>  
                     })  
                 }  
-                <td colSpan="2">{income}</td>  
-                <td colSpan="2">{expense}</td>  
+                <tr>
+                    <td />
+                    <td colSpan="2">Total Income: </td>  
+                    <td colSpan="2">{income}</td>  
+                </tr>
+                <tr>
+                    <td />
+                    <td colSpan="2">Total Expense: </td>  
+                    <td colSpan="2">{Expense}</td>  
+                </tr>
+                <tr>
+                    <td />
+                    <td colSpan="2">Current Balance: </td>  
+                    <td colSpan="2"> {income + expense}</td>  
+                </tr>
                 </tbody>  
+                
             </table>  
         <div>  
         <ReactHTMLTableToExcel  

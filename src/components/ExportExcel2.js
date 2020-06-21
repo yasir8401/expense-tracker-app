@@ -84,7 +84,9 @@ const ExportExcel2 = () => {
             },
           },
           {
-            value: "$" + transaction.amount.toFixed(2),
+            value:
+              (transaction.amount > 0 ? "$" : "-$") +
+              Math.abs(transaction.amount.toFixed(2)),
             style: {
               font: { sz: "12", bold: false },
               alignment: { horizontal: "right" },
@@ -150,7 +152,7 @@ const ExportExcel2 = () => {
       },
     },
     {
-      value: "$" + currentBal,
+      value: (currentBal > 0 ? "$" : "-$") + Math.abs(currentBal),
       style: {
         font: { sz: "12", bold: true },
         fill: {

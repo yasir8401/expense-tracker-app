@@ -84,7 +84,7 @@ const ExportExcel2 = () => {
             },
           },
           {
-            value: transaction.amount.toFixed(2),
+            value: "$" + transaction.amount.toFixed(2),
             style: {
               font: { sz: "12", bold: false },
               alignment: { horizontal: "right" },
@@ -106,7 +106,7 @@ const ExportExcel2 = () => {
       style: { font: { sz: "12", bold: true } },
     },
     {
-      value: income,
+      value: "$" + income,
       style: {
         font: { sz: "12", bold: true },
         alignment: { horizontal: "right" },
@@ -125,7 +125,7 @@ const ExportExcel2 = () => {
       style: { font: { sz: "12", bold: true } },
     },
     {
-      value: expense,
+      value: "$" + expense,
       style: {
         font: { sz: "12", bold: true },
         alignment: { horizontal: "right" },
@@ -150,7 +150,7 @@ const ExportExcel2 = () => {
       },
     },
     {
-      value: currentBal,
+      value: "$" + currentBal,
       style: {
         font: { sz: "12", bold: true },
         fill: {

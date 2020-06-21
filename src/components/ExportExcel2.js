@@ -84,8 +84,11 @@ const ExportExcel2 = () => {
             },
           },
           {
-            value: transaction.amount,
-            style: { font: { sz: "12", bold: false } },
+            value: transaction.amount.toFixed(2),
+            style: {
+              font: { sz: "12", bold: false },
+              alignment: { horizontal: "right" },
+            },
           },
           {
             value: transaction.amount > 0 ? "INCOME" : "EXPENSE",

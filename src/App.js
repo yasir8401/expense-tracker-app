@@ -7,6 +7,7 @@ import { TransactionList } from "./components/TransactionList";
 import { AddTransaction } from "./components/AddTransaction";
 import { GlobalProvider } from "./context/GlobalState";
 import GitHubForkRibbon from "react-github-fork-ribbon";
+import ExportExcel  from "./components/ExportExcel";
 
 function App({ name }) {
   return (
@@ -24,6 +25,7 @@ function App({ name }) {
         <IncomeExpense />
         <TransactionList />
         <AddTransaction />
+        <ExportExcel />
       </div>
     </GlobalProvider>
   );

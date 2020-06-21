@@ -12,6 +12,7 @@
     "react-bootstrap": "^1.0.1",
     "react-dom": "^16.13.1",
     "react-github-fork-ribbon": "^0.6.0",
+    "react-html-table-to-excel": "^2.0.0",
     "react-scripts": "3.4.1"
   },
   "scripts": {

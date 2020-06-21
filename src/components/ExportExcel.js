@@ -19,11 +19,13 @@ export const ExportExcel = () => {
       -1
     ).toFixed(2);
 
+    const currentBal = income - expense;
+
     return (  
         <div>  
             <table id="emp" class="table" style={{display:"none"}}>  
                 <thead>  
-                    <tr style={{backgroundColor: "red"}}>
+                    <tr style={{backgroundColor: "yellow"}}>
                         <th>Id</th>  
                         <th colSpan="2">Transaction Name</th>  
                         <th colSpan="2">Transaction Amount</th>  
@@ -53,7 +55,7 @@ export const ExportExcel = () => {
                 <tr>
                     <td />
                     <td colSpan="2">Current Balance: </td>  
-                    <td colSpan="2"> {income + expense}</td>  
+                    <td colSpan="2"> {currentBal}</td>  
                 </tr>
                 </tbody>  
                 

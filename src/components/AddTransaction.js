@@ -51,7 +51,8 @@ export const AddTransaction = () => {
             onChange={(e) => setAmount(e.target.value)}
             min="0"
             onKeyDown={(e) =>
-              (e.key === "-" || e.key === "+") && e.preventDefault()
+              (e.key === "-" || e.key === "+" || e.key === "e") &&
+              e.preventDefault()
             }
             placeholder="Enter amount..."
           />

@@ -48,7 +48,7 @@ export const ExportExcel = () => {
                 <tr>
                     <td />
                     <td colSpan="2">Total Expense: </td>  
-                    <td colSpan="2">{Expense}</td>  
+                    <td colSpan="2">{expense}</td>  
                 </tr>
                 <tr>
                     <td />
